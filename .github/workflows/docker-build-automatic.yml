@@ -17,4 +17,4 @@ jobs:
         password: ${{ secrets.GITHUB_TOKEN }}
     - run: docker build -f dockerfiles/automatic -t ghcr.io/${{ github.actor }}/rocm_docker:automatic .
     - run: docker push ghcr.io/${{ github.actor }}/rocm_docker:automatic
-    - run: docker image rm ghcr.io/r3dlobst3r/rocm_docker:automatic
+    - run: docker image prune -a -f

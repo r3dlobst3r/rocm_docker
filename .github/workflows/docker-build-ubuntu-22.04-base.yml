@@ -17,3 +17,4 @@ jobs:
         password: ${{ secrets.GITHUB_TOKEN }}
     - run: docker build -f dockerfiles/ubuntu-22.04-base -t ghcr.io/${{ github.actor }}/rocm_docker:ubuntu-22.04-base .
     - run: docker push ghcr.io/${{ github.actor }}/rocm_docker:ubuntu-22.04-base
+    - run: docker image prune -a -f
