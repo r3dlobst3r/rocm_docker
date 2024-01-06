@@ -1,6 +1,6 @@
 name: docker-build-ubuntu-22.04-base
 
-on: workflow_dispatch
+on: push
 
 jobs:
   build:
