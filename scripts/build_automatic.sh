@@ -6,12 +6,16 @@ set -ex
 
 apt install -y -qq git wget aria2 libcairo2-dev pkg-config python3-dev libgoogle-perftools-dev
 
-git clone -b v20230512 https://github.com/evshiron/automatic
+git clone https://github.com/vladmandic/automatic
 
 cd /root/automatic
 
 git reset --hard
 git submodule update --init --recursive
+
+mkdir .venv
+python3 -m venv .venv
+source .venv/bin/activate
 
 pip install git+https://github.com/openai/CLIP.git@d50d76daa670286dd6cacf3bcd80b5e4823fc8e1
 

@@ -5,9 +5,9 @@ WORKDIR /root
 
 ADD scripts/build_automatic.sh build_automatic.sh
 
-RUN source venv/bin/activate \
+RUN source .venv/bin/activate \
   && bash build_automatic.sh
 
-CMD source venv/bin/activate \
+CMD source .venv/bin/activate \
   && cd /root/automatic \
   && LD_PRELOAD=libtcmalloc.so python3 launch.py --listen
