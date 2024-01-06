@@ -9,4 +9,4 @@ RUN bash build_a1111-webui.sh
 
 CMD source venv/bin/activate \
   && cd /root/stable-diffusion-webui \
-  && LD_PRELOAD=libtcmalloc.so python3 launch.py --listen --no-half-vae
+  && python launch.py --precision full --no-half

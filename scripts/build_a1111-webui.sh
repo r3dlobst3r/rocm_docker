@@ -33,6 +33,5 @@ git clone https://github.com/sczhou/CodeFormer /root/stable-diffusion-webui/repo
 git clone https://github.com/salesforce/BLIP /root/stable-diffusion-webui/repositories/BLIP
 
 pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/rocm5.7
-pip install -r /root/stable-diffusion-webui/requirements.txt
 
 # python launch.py --listen
