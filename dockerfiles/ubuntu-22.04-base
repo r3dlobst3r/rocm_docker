@@ -1,4 +1,3 @@
-#
 FROM ubuntu:22.04
 RUN apt update && apt install -y curl python3-venv \
   && curl -O https://repo.radeon.com/amdgpu-install/6.0/ubuntu/jammy/amdgpu-install_6.0.60000-1_all.deb \
