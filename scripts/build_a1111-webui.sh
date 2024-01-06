@@ -31,7 +31,7 @@ git clone https://github.com/CompVis/taming-transformers /root/stable-diffusion-
 git clone https://github.com/crowsonkb/k-diffusion /root/stable-diffusion-webui/repositories/k-diffusion
 git clone https://github.com/sczhou/CodeFormer /root/stable-diffusion-webui/repositories/CodeFormer
 git clone https://github.com/salesforce/BLIP /root/stable-diffusion-webui/repositories/BLIP
-
+pip install -U pipß
 pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/rocm5.7
 
 # python launch.py --listen
