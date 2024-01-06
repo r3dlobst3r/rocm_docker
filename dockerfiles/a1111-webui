@@ -1,0 +1,13 @@
+FROM ghcr.io/r3dlobst3r/rocm_docker:ubuntu-22.04-base
+
+SHELL ["/bin/bash", "-c"]
+WORKDIR /root
+
+ADD scripts/build_a1111-webui.sh build_a1111-webui.sh
+
+RUN source venv/bin/activate \
+  && bash build_a1111-webui.sh
+
+CMD source venv/bin/activate \
+  && cd /root/stable-diffusion-webui \
+  && LD_PRELOAD=libtcmalloc.so python3 launch.py --listen --no-half-vae
