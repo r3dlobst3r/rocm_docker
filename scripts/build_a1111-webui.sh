@@ -6,7 +6,7 @@ set -ex
 
 apt install -y -qq git wget aria2 libcairo2-dev pkg-config python3-dev libgoogle-perftools-dev
 
-git clone -b v2.1 https://github.com/camenduru/stable-diffusion-webui
+git clone https://github.com/camenduru/stable-diffusion-webui
 mkdir stable-diffusion-webui/.venv
 python3 -m venv stable-diffusion-webui/.venv
 source stable-diffusion-webui/.venv/bin/activate
@@ -32,6 +32,8 @@ git clone https://github.com/crowsonkb/k-diffusion /root/stable-diffusion-webui/
 git clone https://github.com/sczhou/CodeFormer /root/stable-diffusion-webui/repositories/CodeFormer
 git clone https://github.com/salesforce/BLIP /root/stable-diffusion-webui/repositories/BLIP
 pip install -U pip
+pip install -r /root/stable-diffusion-webui/repositories/CodeFormer/requirements.txt
+pip install -r /root/stable-diffusion-webui/requirements.txt
 pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/rocm5.7
 
 # python launch.py --listen
