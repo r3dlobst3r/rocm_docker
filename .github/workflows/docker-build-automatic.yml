@@ -17,4 +17,4 @@ jobs:
         password: ${{ secrets.GITHUB_TOKEN }}
     - run: docker build -f dockerfiles/automatic -t ghcr.io/${{ github.actor }}/rocm_docker:automatic .
     - run: docker push ghcr.io/${{ github.actor }}/rocm_docker:automatic
-    - run: docker rmi $(docker images | egrep --ignore-case "/$IMAGEREGISTRYNAME\s" | egrep --invert-match "latest|$TAGVERSION" | tr --squeeze-repeats ' ' | cut --delimiter ' ' --fields 3)
+    - run: docker image prune -a

@@ -17,4 +17,4 @@ jobs:
         password: ${{ secrets.GITHUB_TOKEN }}
     - run: docker build -f dockerfiles/a1111-webui -t ghcr.io/${{ github.actor }}/rocm_docker:a1111-webui .
     - run: docker push ghcr.io/${{ github.actor }}/rocm_docker:a1111-webui
-    - run: docker rmi $(docker images | egrep --ignore-case "/$IMAGEREGISTRYNAME\s" | egrep --invert-match "latest|$TAGVERSION" | tr --squeeze-repeats ' ' | cut --delimiter ' ' --fields 3)
+    - run: docker image prune -a
