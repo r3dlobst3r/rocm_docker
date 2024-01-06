@@ -1,6 +1,6 @@
 name: docker-build-a1111-webui
 
-on: workflow_dispatch
+on: push
 
 jobs:
   build:
