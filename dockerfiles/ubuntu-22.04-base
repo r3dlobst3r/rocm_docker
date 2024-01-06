@@ -1,5 +1,5 @@
 FROM ubuntu:22.04
-RUN  echo "nameserver 8.8.8.8" | sudo tee /etc/resolv.conf > /dev/null \ 
+RUN  echo "nameserver 8.8.8.8" | tee /etc/resolv.conf > /dev/null \ 
   && apt update && apt install -y curl python3-venv \
   && curl -O https://repo.radeon.com/amdgpu-install/6.0/ubuntu/jammy/amdgpu-install_6.0.60000-1_all.deb \
   && dpkg -i amdgpu-install_6.0.60000-1_all.deb \
