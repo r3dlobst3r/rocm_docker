@@ -8,5 +8,5 @@ ADD scripts/build_automatic.sh build_automatic.sh
 RUN bash build_automatic.sh
 
 CMD cd /root/automatic \
-  && source .venv/bin/activate \
+  && source /root/automatic/.venv/bin/activate \
   && LD_PRELOAD=libtcmalloc.so python3 launch.py --listen
