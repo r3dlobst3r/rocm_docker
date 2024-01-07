@@ -5,7 +5,7 @@ WORKDIR /root
 
 ADD scripts/build_automatic.sh build_automatic.sh
 
-RUN source .venv/bin/activate \
+RUN source /root/automatic/.venv/bin/activate \
   && bash build_automatic.sh
 
 CMD source .venv/bin/activate \
