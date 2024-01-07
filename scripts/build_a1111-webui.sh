@@ -7,9 +7,9 @@ set -ex
 apt install -y -qq git wget aria2 libcairo2-dev pkg-config python3-dev libgoogle-perftools-dev
 
 git clone https://github.com/camenduru/stable-diffusion-webui
-mkdir stable-diffusion-webui/.venv
-python3 -m venv stable-diffusion-webui/.venv
-source stable-diffusion-webui/.venv/bin/activate
+mkdir /root/stable-diffusion-webui/.venv
+python3 -m venv /root/stable-diffusion-webui/.venv
+source /root/stable-diffusion-webui/.venv/bin/activate
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/embed/upscale/resolve/main/4x-UltraSharp.pth -d /root/stable-diffusion-webui/models/ESRGAN -o 4x-UltraSharp.pth
 git clone https://github.com/camenduru/stable-diffusion-webui-images-browser /root/stable-diffusion-webui/extensions/stable-diffusion-webui-images-browser
 git clone https://github.com/kohya-ss/sd-webui-additional-networks /root/stable-diffusion-webui/extensions/sd-webui-additional-networks
