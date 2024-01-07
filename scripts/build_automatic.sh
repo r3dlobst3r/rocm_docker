@@ -33,3 +33,4 @@ pip install -r /root/automatic/repositories/CodeFormer/requirements.txt
 pip install -r /root/automatic/requirements.txt
 
 pip install tensorflow==2.12.0
+pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/rocm5.7
