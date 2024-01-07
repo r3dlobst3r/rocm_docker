@@ -1,4 +1,4 @@
-FROM ghcr.io/r3dlobst3r/rocm_docker:ubuntu-22.04-base
+FROM r3dlobst3r/rocm_docker:ubuntu-22.04-base
 
 SHELL ["/bin/bash", "-c"]
 WORKDIR /root
