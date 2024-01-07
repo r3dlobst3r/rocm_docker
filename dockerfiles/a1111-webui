@@ -8,5 +8,5 @@ ADD scripts/build_a1111-webui.sh build_a1111-webui.sh
 RUN bash build_a1111-webui.sh
 
 CMD cd /root/stable-diffusion-webui \
-  && source /root/a1111-webui/.venv/bin/activate \
+  && source /root/stable-diffusion-webui/.venv/bin/activate \
   && python launch.py --precision full --no-half
