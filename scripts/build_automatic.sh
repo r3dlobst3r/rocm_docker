@@ -28,7 +28,7 @@ git clone https://github.com/sczhou/CodeFormer /root/automatic/repositories/Code
 git clone https://github.com/salesforce/BLIP /root/automatic/repositories/BLIP
 
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/embed/upscale/resolve/main/4x-UltraSharp.pth -d /root/automatic/models/ESRGAN -o 4x-UltraSharp.pth
-
+pip install -U pip
 pip install -r /root/automatic/repositories/CodeFormer/requirements.txt
 pip install -r /root/automatic/requirements.txt
 
